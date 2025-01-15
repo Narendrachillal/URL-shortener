@@ -10,8 +10,8 @@
       "use": "@vercel/static"
     }
   ],
-  "routes": {
+  "routes": [{
     "src": "/(.*)",
     "dest": "frontend/build/$1"
-  }
+  }]
 }
