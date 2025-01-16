@@ -23,7 +23,7 @@ export default function UrlShortener() {
     try {
       // Send the URL to the backend using Axios
       const response = await axios.post(
-        "http://localhost:5000/api/v1/url",
+        "https://url-shortener-backend-red.vercel.app/",
         { url: inputUrl },
         {
           headers: {
