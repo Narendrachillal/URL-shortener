@@ -1,4 +1,4 @@
-const whitelist = ["https://url-shortener-frontend-ochre-two.vercel.app/"];
+const whitelist = ["https://url-shortener-frontend-ochre-two.vercel.app"];
 
 const corsOptions = {
   origin: function (origin, callback) {
