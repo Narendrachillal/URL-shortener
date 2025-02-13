@@ -1,11 +1,12 @@
 const whitelist = [
-  "http://localhost:5173", // For local testing
-  "https://url-shortener-frontend-ochre-two.vercel.app" // Deployed frontend
+  "http://localhost:5173", 
+  "https://url-shortener-frontend-ochre-two.vercel.app"
 ];
 
 const corsOptions = {
   origin: function (origin, callback) {
-    console.log("Origin:", origin); // Debugging
+    console.log("Origin received:", origin || "No Origin (likely Postman or server-to-server request)");
+
     if (!origin || whitelist.includes(origin)) {
       callback(null, true);
     } else {
@@ -13,8 +14,8 @@ const corsOptions = {
       callback(new Error("Not allowed by CORS"));
     }
   },
-  methods: ["GET", "POST", "OPTIONS"], // Explicitly allow these methods
-  allowedHeaders: ["Content-Type", "Authorization"], // Allow these headers
+  methods: ["GET", "POST", "OPTIONS"], 
+  allowedHeaders: ["Content-Type", "Authorization"], 
   credentials: true,
 };
 
