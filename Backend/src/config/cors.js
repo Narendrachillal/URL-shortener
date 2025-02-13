@@ -1,6 +1,6 @@
 const whitelist = [
   "http://localhost:5173", // For local testing
-  "https://url-shortener-frontend-ochre-two.vercel.app/" // Deployed frontend
+  "https://url-shortener-frontend-ochre-two.vercel.app" // Deployed frontend
 ];
 
 const corsOptions = {
